@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="vaksinasi">
+    <meta name="author" content="vaksinasi">
+    <meta name="keywords" content="vaksinasi">
+
+    <!-- Title Page-->
+    <title>Vaksinasi | RS Bhayangkara Bojonegoro</title>
+    <!-- Favicons -->
+    <link href="img/logo.png" rel="icon">
+    <link href="img/logo.png" rel="apple-touch-icon">
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.7/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous" />
+    <!-- Main CSS-->
+    <link href="css/main.min.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    
+                        class="mx-auto d-block img-size-4 img-fluid" alt="">
+                    <h2 class="title">PENDAFTARAN VAKSINASI </h2>
+                </div>
+                <div class="card-body">
+                    
+                    <form method="POST" autocomplete="off" name="vaksinasi-rsbwt">
+                        <div class="form-row">
+                            <div class="name">NIK (Nomor Induk Kependudukan) </div>
+                            <div class="value">
+                            <div class="input-group">
+                            <input required class="input--style-5" type="number" name="NIK" pattern="[0-9]*" maxlength="16"  placeholder="Kesalahan NIK menyebabkan data tidak dapat di input " pattern="[0-9]*" maxlength="16" required />
+                        </div></div></div>
+                        <div class="form-row">
+                            <div class="name">Nama Lengkap </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input required class="input--style-5" type="text" name="Nama" placeholder="Nama Lengkap Sesuai KK/KTP">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Jenis Kelamin </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-55">Laki-laki
+                                    <input value="lk" type="radio"  name="gender">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Perempuan
+                                    <input value="pr" type="radio" name="gender">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Tanggal lahir </div>
+                            <div class="value">
+                            <div class="input-group">
+                            <input required class="input--style-5" type="date" name="Tanggallahir">
+                           </div>
+                           </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Alamat </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="input--style-5" id="" cols="49" name="alamat" rows="2" placeholder="Alamat lengkap" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Tanggal Vaksinasi </div>
+                            <div class="value">
+                                <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="TanggalVaksinasi">
+                                        <option disabled="disabled" selected>Tanggal Vaksinasi</option>
+                                        <option value="Ahad 19 September 2021">Ahad 19 September 2021</option>
+                                
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Vaksin ke </div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="Vaksinke">
+                                        <option disabled="disabled" selected>Vaksin ke ?</option>
+                                        <option value="pertama">Pertama</option>
+                                        
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Kategori</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="Kategori">
+                                            <option disabled="disabled" selected>Pilih Kategori</option>
+                                            
+                                            <option value="Remaja">Remaja (12-17 tahun)</option>
+                                            <option value="Dewasa">Dewasa (17-60 tahun)</option>
+                                            <option value="Lansia"> Lansia (>60 tahun)</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda memiliki riwayat alergi berat setelah divaksinasi COVID-19 sebelumnya? </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N1" value="Ya" required  >
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N1" value="tidak" required >
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda sedang hamil?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N2" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N2" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda mengidap penyakit autoimun seperti asma, lupus?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N3" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N3" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda sedang mendapat pengobatan untuk gangguan pembekuan darah, kelainan darah, defisiensi imun dan penerima produk darah/transfusi?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N4" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N4" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda sedang mendapat pengobatan immunosuppressant seperti kortikosteroid dan kemoterapi?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N5" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N5" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda memiliki penyakit jantung berat dalam keadaan sesak?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N6" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N6" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="name">Pertanyaan tambahan bagi sasaran lansia (≥ 60 tahun)</div><br>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda mengalami kesulitan untuk naik 10 anak tangga?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N7" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N7" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda sering merasa kelelahan?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N8" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N8" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda memiliki paling sedikit 5 dari 11 penyakit (hipertensi, diabetes, kanker, penyakit paru kronis, serangan jantung, gagal jantung kongestif, nyeri dada, asma, nyeri sendi, stroke dan penyakit ginjal)
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N9" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N9" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda mengalami kesulitan berjalan kira-kira 100 sampai 200 meter?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N10" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N10" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row p-t-20">
+                            <label class="label label--block">Apakah Anda mengalami penurunan berat badan yang bermakna dalam setahun terakhir?
+                            </label>
+                            <div class="p-t-15">
+                                <label class="radio-container m-r-50">Ya
+                                    <input type="radio" id="ya" name="N11" value="Ya" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="radio-container">Tidak
+                                    <input type="radio" id="tidak" name="N11" value="tidak" required>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">No HP aktif</div>
+                            <div class="value">
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        <div class="input-group-desc">
+                                            <input class="input--style-5" type="number" pattern="[0-9]*" placeholder="No hp aktif" name="Phone" required>
+                        
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-row">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group-desc">
+                                    
+                                    <input class="input--style-5" name="Email" type="email" placeholder="Email untuk kirim bukti pendaftaran" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn--radius-2 btn--red" type="submit" name="submit">KIRIM</button>
+                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                            <p class="loading" > <i class="fas fa-info-circle"></i> Sesudah Klik <em class="emgreen" >KIRIM </em> Tunggu Sampai muncul notifikasi, tidak perlu klik kirim berkali-kali</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.7/dist/sweetalert2.all.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+
+    <!-- Main JS-->
+    <script src="js/global.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2();
+        });
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx3bmuj6O6RXf09sWBIMg_c9lrBWqBd4jwMphwnkM1CHmuHqQsUlzvItKy4lO69ii-uOw/exec'
+            const form = document.forms['vaksinasi-rsbwt']
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Pendaftaran Berhasil, Bukti akan di kirimkan via email',
+                    showConfirmButton: false,
+                    timer: 2000
+                    
+                }))
+                
+                .catch(error => console.error('Error!', error.message))
+                form.reset();
+        })
+    </script>
+    
+</body>
+</html>
